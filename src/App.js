@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './List';
-// import Chat from './Chat';
-import Stage from './Stage';
-import {participants} from './participants';
+import Chat from './Chat';
+// import Stage from './Stage';
+
 
 class App extends Component {
-  static defaultProps = participants;
   render() {
+    console.log(this.props);
     return (
       <section class="App-container">
-        <List participants={this.props} />
-        {/* <Chat /> */}
+        <List participants={this.props}/>
+        <Chat />
         {/* <Stage /> */}
       </section>
     );
