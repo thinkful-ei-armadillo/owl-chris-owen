@@ -3,11 +3,12 @@ import Card from './Card';
 import {participants} from './participants';
 
 class List extends Component {
-  static defaultProps = participants;
+  static defaultProps = {participants};
   render() {
-    const cards = this.props.map(item => <Card avatar={item.avatar} name={item.name} inSession={item.inSession} key={item.id} />);
+    const cards = this.props.participants.map(item => <Card avatar={item.avatar} 
+      name={item.name} inSession={item.inSession} key={item.id} />);
       return (
-      <ul class="List">
+      <ul className="List">
         {cards}
       </ul>
     )
