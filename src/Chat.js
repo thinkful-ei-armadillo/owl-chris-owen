@@ -8,8 +8,14 @@ class Chat extends Component {
   render() {
     return(
       <ul className="message-pane">
-        {this.props.chatEvents.map((msg, index) => <Message message={msg.message} type={msg.type} 
-        time={msg.time} timestamp={msg.timestamp} id={msg.participantId} key={index} />)}
+        {this.props.chatEvents.map((msg, index) =>
+         <Message
+          message={msg.message}
+          type={msg.type}
+          time={msg.time}
+          timestamp={msg.timestamp}
+          id={msg.participantId}
+          key={index} />)}
       </ul>
     )
   }
